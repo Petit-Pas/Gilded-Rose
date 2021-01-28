@@ -10,7 +10,7 @@ namespace csharpcore
         {
             get => _baseItemUpdater;
         }
-        static private BaseItemUpdater _baseItemUpdater = new BaseItemUpdater();
+        private static BaseItemUpdater _baseItemUpdater = new BaseItemUpdater();
 
         protected virtual int getMaxValue()
         {

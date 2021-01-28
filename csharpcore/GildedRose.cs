@@ -14,7 +14,7 @@ namespace csharpcore
         {
             foreach (Item item in Items)
             {
-                BaseItemUpdater.Instance.Update(item);
+                AgedBrieItemUpdater.Instance.Update(item);
             }
 
             /*
