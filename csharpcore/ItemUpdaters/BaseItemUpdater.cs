@@ -32,7 +32,7 @@ namespace csharpcore.ItemUpdaters
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        protected virtual int getCurrentModifier(Item item)
+        protected virtual int getPeriodModifier(Item item)
         {
             if (item.SellIn >= 0)
                 return 1;
@@ -48,7 +48,7 @@ namespace csharpcore.ItemUpdaters
         {
             item.SellIn += getSellInModifier();
 
-            item.Quality += getQualityModifier() * getCurrentModifier(item);
+            item.Quality += getQualityModifier() * getPeriodModifier(item);
 
             if (item.Quality > getMaxValue())
                 item.Quality = getMaxValue();

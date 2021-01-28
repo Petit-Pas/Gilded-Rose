@@ -17,7 +17,7 @@ namespace csharpcore.ItemUpdaters
             return 1;
         }
 
-        protected override int getCurrentModifier(Item item)
+        protected override int getPeriodModifier(Item item)
         {
             if (item.SellIn >= 10)
                 return 1;
