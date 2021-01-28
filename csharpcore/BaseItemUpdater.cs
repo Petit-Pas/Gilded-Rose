@@ -27,6 +27,11 @@ namespace csharpcore
             return -1;
         }
 
+        /// <summary>
+        ///     modifier to apply to getQualityModifier() depending on the period (example: after SellIn)
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
         protected virtual int getCurrentModifier(Item item)
         {
             if (item.SellIn >= 0)

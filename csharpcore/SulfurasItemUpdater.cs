@@ -12,19 +12,8 @@ namespace csharpcore
         }
         private static SulfurasItemUpdater _sulfurasItemUpdater = new SulfurasItemUpdater();
 
-        protected override int getQualityModifier()
+        public override void Update(Item item)
         {
-            return 0;
-        }
-
-        protected override int getSellInModifier()
-        {
-            return 0;
-        }
-
-        protected override int getMaxValue()
-        {
-            return 80;
         }
     }
 }
