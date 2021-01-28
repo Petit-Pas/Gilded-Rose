@@ -36,8 +36,6 @@ namespace csharpcoreXUnitTests
             for (int i = 0; i != 30; i += 1)
                 gildedRose.UpdateQuality();
             Assert.Equal(50, items[0].Quality);
-
-
         }
     }
 }
