@@ -41,7 +41,7 @@ namespace csharpcore
 
         public virtual void Update(Item item)
         {
-            item.SellIn -= 1;
+            item.SellIn += getSellInModifier();
 
             item.Quality += getQualityModifier() * getCurrentModifier(item);
 
