@@ -11,6 +11,7 @@ namespace csharpcore
             AgedBrie,
             Sulfura,
             BackstagePass,
+            ConjuredItem,
         }
 
         IList<(ItemType Type, Item Item)> Items;
@@ -34,6 +35,8 @@ namespace csharpcore
                 // who knows if we can have backstage passes to other concerts
                 else if (item.Name.StartsWith("Backstage passes to"))
                     Items.Add((ItemType.BackstagePass, item));
+                else if (item.Name.Contains("Conjured"))
+                    Items.Add((ItemType.ConjuredItem, item));
                 else
                     Items.Add((ItemType.Normal, item));
             }
@@ -56,6 +59,9 @@ namespace csharpcore
                         break;
                     case ItemType.BackstagePass:
                         BackstagePassItemUpdater.Instance.Update(data.Item);
+                        break;
+                    case ItemType.ConjuredItem:
+                        ConjuredItemUpdater.Instance.Update(data.Item);
                         break;
                     default:
                         break;
