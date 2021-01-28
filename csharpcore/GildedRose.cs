@@ -14,7 +14,7 @@ namespace csharpcore
         {
             foreach (Item item in Items)
             {
-                SulfurasItemUpdater.Instance.Update(item);
+                BackstagePassItemUpdater.Instance.Update(item);
             }
 
             /*
