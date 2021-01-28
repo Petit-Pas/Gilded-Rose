@@ -34,6 +34,11 @@ namespace csharpcore
             return 2;
         }
 
+        protected virtual int getSellInModifier()
+        {
+            return -1;
+        }
+
         public virtual void Update(Item item)
         {
             item.SellIn -= 1;
